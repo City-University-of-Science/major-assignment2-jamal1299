@@ -43,7 +43,45 @@ void get_value()
     std::cout<<"Value of the First Operand: "<<x<<std::endl;
     std::cout<<"Value of the Second Operand:"<<y<<std::endl;
 }
+
+double add ()
+{
+    std::cout<< x + y;
 }
+
+double subtract ()
+{
+    std::cout<< x - y;
+}
+
+double multiply ()
+{
+    std::cout<< x * y;
+}
+
+double divide ()
+{
+    if(y==0)
+    {
+     std::cout<<"You Entered a Null value.\n";
+
+    }
+    std::cout<< x / y;
+}
+
+double sqroot ()
+{
+    std::cout<< sqrt(x);
+}
+
+
+
+
+}
+
+
+int main()
+{
 
 return 0;
 
