@@ -4,6 +4,45 @@ include <iostream>
 class Calculator {
 public:
 
+void value_setter()
+{
+double xc284, xc285;    
+std::cout<<"enter the first number:"<<std::endl;
+std::cin>>xc284;
+while(1){ 
+if(std::cin.fail())
+{  
+std::cin.clear();
+std::cin.ignore();
+std::cout<<"number is invalid, try another number:"<<std::endl;
+std::cin>>xc284;
+}
+if(!std::cin.fail())
+break;
+}
+std::cout<<"enter the second number:"<<std::endl;
+std::cin>>xc285;
+while(1){
+if(std::cin.fail())
+{  
+std::cin.clear();
+std::cin.ignore();
+std::cout<<"number is invalid, try another number:"<<std::endl;
+std::cin>>xc285;
+}
+if(!std::cin.fail())
+break;
+}
+x = xc284;
+y = xc285;
+
+}
+
+void get_value() 
+{
+    std::cout<<"Value of the First Operand: "<<x<<std::endl;
+    std::cout<<"Value of the Second Operand:"<<y<<std::endl;
+}
 }
 
 return 0;
