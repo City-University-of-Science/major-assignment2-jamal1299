@@ -74,11 +74,79 @@ double sqroot ()
 {
     std::cout<< sqrt(x);
 }
-
-
-
-
+double cosineh ()
+{
+    std::cout<< cosh(x);
 }
+
+double tangenth ()
+{
+    std::cout<< tanh(x);
+}
+
+double cube ()
+{
+    std::cout<< x*x*x;
+}
+
+double power ()
+{
+    std::cout<<pow(x,y);
+}
+
+double average ()
+{
+    std::cout<<(x+y)/2;
+}
+double log_simple ()
+{
+    std::cout<< log(x);
+}
+
+double log_base ()
+{
+    std::cout<< log10(x);
+}
+
+double sine ()
+{
+    std::cout<< sin(x);
+}
+
+double cosine ()
+{
+    std::cout<< cos(x);
+}
+
+double tangent ()
+{
+    std::cout<< tan(x);
+}
+
+double arc_sine ()
+{
+    std::cout<< asin(x);
+}
+
+double arc_cosine ()
+{
+    std::cout<< acos(x);
+}
+
+double arc_tan ()
+{
+    std::cout<< atan(x);
+}
+
+double sineh ()
+{
+    std::cout<< sinh(x);
+}
+
+
+
+
+};
 
 
 int main()
