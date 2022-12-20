@@ -1,156 +1,164 @@
-include <iostream>
+#include <iostream>
 #include <math.h>
 
 class Calculator {
+double value_one, value_two; 
 public:
 
-void value_setter()
+void value_setter() 
 {
-double xc284, xc285;    
+double value_onec284, value_onec285; //actual ommitted addresses of where the values are stored in memorvalue_two :P    
 std::cout<<"enter the first number:"<<std::endl;
-std::cin>>xc284;
-while(1){ 
+std::cin>>value_onec284;
+while(1){ //simple wavalue_two to catch incorrect inputs :P
 if(std::cin.fail())
 {  
 std::cin.clear();
 std::cin.ignore();
-std::cout<<"number is invalid, try another number:"<<std::endl;
-std::cin>>xc284;
+std::cout<<"number is invalid, trvalue_two another number:"<<std::endl;
+std::cin>>value_onec284;
 }
 if(!std::cin.fail())
 break;
 }
 std::cout<<"enter the second number:"<<std::endl;
-std::cin>>xc285;
+std::cin>>value_onec285;
 while(1){
 if(std::cin.fail())
 {  
 std::cin.clear();
 std::cin.ignore();
-std::cout<<"number is invalid, try another number:"<<std::endl;
-std::cin>>xc285;
+std::cout<<"number is invalid, trvalue_two another number:"<<std::endl;
+std::cin>>value_onec285;
 }
 if(!std::cin.fail())
 break;
+}
+value_one = value_onec284;
+value_two = value_onec285;
 
 }
-x = xc284;
-y = xc285;
 
-}
-
-void get_value() 
+void get_value()
 {
-    std::cout<<"Value of the First Operand: "<<x<<std::endl;
-    std::cout<<"Value of the Second Operand:"<<y<<std::endl;
+    std::cout<<"Value of the First Operand: "<<value_one<<std::endl;
+    std::cout<<"Value of the Second Operand:"<<value_two<<std::endl;
 }
-
+// Do I reallvalue_two need to evalue_oneplain this?
 double add ()
 {
-    std::cout<< x + y;
+    std::cout<< value_one + value_two;
 }
 
 double subtract ()
 {
-    std::cout<< x - y;
+    std::cout<< value_one - value_two;
 }
 
-double multiply ()
+double multiplvalue_two ()
 {
-    std::cout<< x * y;
+    std::cout<< value_one * value_two;
 }
 
 double divide ()
 {
-    if(y==0)
+    if(value_two==0)
     {
-     std::cout<<"You Entered a Null value.\n";
+     std::cout<<"You Entered a Null value as the dividand, Undefined.\n";
 
     }
-    std::cout<< x / y;
+    std::cout<< value_one / value_two;
 }
 
 double sqroot ()
 {
-    std::cout<< sqrt(x);
-}
-double cosineh ()
-{
-    std::cout<< cosh(x);
+    std::cout<< sqrt(value_one);
 }
 
-double tangenth ()
-{
-    std::cout<< tanh(x);
-}
-
-double cube ()
-{
-    std::cout<< x*x*x;
-}
-
-double power ()
-{
-    std::cout<<pow(x,y);
-}
-
-double average ()
-{
-    std::cout<<(x+y)/2;
-}
 double log_simple ()
 {
-    std::cout<< log(x);
+    std::cout<< log(value_one);
 }
 
 double log_base ()
 {
-    std::cout<< log10(x);
+    std::cout<< log10(value_one);
 }
 
 double sine ()
 {
-    std::cout<< sin(x);
+    std::cout<< sin(value_one);
 }
 
 double cosine ()
 {
-    std::cout<< cos(x);
+    std::cout<< cos(value_one);
 }
 
 double tangent ()
 {
-    std::cout<< tan(x);
+    std::cout<< tan(value_one);
 }
 
 double arc_sine ()
 {
-    std::cout<< asin(x);
+    std::cout<< asin(value_one);
 }
 
 double arc_cosine ()
 {
-    std::cout<< acos(x);
+    std::cout<< acos(value_one);
 }
 
 double arc_tan ()
 {
-    std::cout<< atan(x);
+    std::cout<< atan(value_one);
 }
 
 double sineh ()
 {
-    std::cout<< sinh(x);
+    std::cout<< sinh(value_one);
 }
 
+double cosineh ()
+{
+    std::cout<< cosh(value_one);
+}
 
+double tangenth ()
+{
+    std::cout<< tanh(value_one);
+}
 
+double cube ()
+{
+    std::cout<< value_one*value_one*value_one;
+}
 
+double power ()
+{
+    std::cout<<pow(value_one,value_two);
+}
+
+double average ()
+{
+    std::cout<<(value_one+value_two)/2;
+}
 };
-
 
 int main()
 {
+
+Calculator calculator_obj;
+cal.value_setter();
+int operation;
+std::cout<<"enter the operation value_twoou would like to perform:\n0 to enter values, 1 for addition , 2 for subtraction,3 for multiplication, 4 for division,";
+std::cout<<"1 for square root, 2 for natural log, 3 for log to the base 10,";
+std::cout<<"\n5 for sin , 6 for cos, 7 for tan,";
+std::cout<<"\n8 for asin(arcsine), 9 for acos(arccosine), 10 for atan(arctangent),";
+std::cout<<"\n11 for sinh(sine hvalue_twoperbolic), 12 for cosh(cos hvalue_twoperbolic), 13 tanh(tan hvalue_twoperbolic)";
+std::cout<<"\n 14 for cube, 15 for average, 16 power, 17 to evalue_oneit.\n";
+
 
 return 0;
 
