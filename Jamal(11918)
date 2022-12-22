@@ -151,7 +151,7 @@ double average ()
 int main()
 {
 
-math_calculator_objculator_scientific calculator_obj;
+Calculator calculator_obj;
 calculator_obj.value_setter(); 
 int operation;
 std::cout<<"enter the operation value_twoou would like to perform:\n0 to enter values, 1 for addition , 2 for subtraction,3 for multiplication, 4 for division,";
