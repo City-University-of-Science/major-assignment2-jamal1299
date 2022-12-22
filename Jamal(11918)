@@ -9,7 +9,7 @@ public:
 
 void value_setter() 
 {
-double value_onec284, value_onec285; //actual ommitted addresses of where the values are stored in memorvalue_two :P    
+double value_onec284, value_onec285;    
 std::cout<<"enter the first number:"<<std::endl;
 std::cin>>value_onec284;
 while(1){ //simple wavalue_two to catch incorrect inputs :P
@@ -151,15 +151,15 @@ double average ()
 int main()
 {
 
-Calculator calculator_obj;
-cal.value_setter();
+math_calculator_objculator_scientific calculator_obj;
+calculator_obj.value_setter(); 
 int operation;
 std::cout<<"enter the operation value_twoou would like to perform:\n0 to enter values, 1 for addition , 2 for subtraction,3 for multiplication, 4 for division,";
-std::cout<<"1 for square root, 2 for natural log, 3 for log to the base 10,";
 std::cout<<"\n5 for sin , 6 for cos, 7 for tan,";
-std::cout<<"\n8 for asin(arcsine), 9 for acos(arccosine), 10 for atan(arctangent),";
+std::cout<<"8 for asin(arcsine), 9 for acos(arccosine), 10 for atan(arctangent),";
 std::cout<<"\n11 for sinh(sine hvalue_twoperbolic), 12 for cosh(cos hvalue_twoperbolic), 13 tanh(tan hvalue_twoperbolic)";
 std::cout<<"\n 14 for cube, 15 for average, 16 power, 17 to evalue_oneit.\n";
+
 
 do{
 std::cout<<"\nYour Choice: \n";std::cin>>operation;
@@ -178,82 +178,82 @@ switch(operation)
 {
     double result;
 case 0:
-cal.value_setter();
+calculator_obj.value_setter();
     break;
 
 case 1:
-    result = cal.add();
+    result = calculator_obj.add();
     break;
 
 case 2:
-    result = cal.subtract();
+    result = calculator_obj.subtract();
     break;
 
 case 3:
-    result = cal.multiplvalue_two();
+    result = calculator_obj.multiplvalue_two();
     break;
 
 case 4:
-    result = cal.divide();
+    result = calculator_obj.divide();
     break;
 
 case 5:
-    result = cal.sine();
+    result = calculator_obj.sine();
 
     break;
 
 case 6:
-    result = cal.cosine();
+    result = calculator_obj.cosine();
  
     break;
 
 case 7:
-    result = cal.tangent();
+    result = calculator_obj.tangent();
 
     break;
 
 case 8:
-    result = cal.arc_sine();
+    result = calculator_obj.arc_sine();
 
     break;
 
 case 9:
-    result = cal.arc_cosine();
+    result = calculator_obj.arc_cosine();
 
     break;
 
 case 10:
-    result = cal.arc_tan();
+    result = calculator_obj.arc_tan();
 
     break;
 
 case 11:
-    result = cal.sineh();
+    result = calculator_obj.sineh();
 
     break;
 
 case 12:
-    result = cal.cosineh();
+    result = calculator_obj.cosineh();
 
     break;
 
 case 13:
-    result = cal.tangenth();
+    result = calculator_obj.tangenth();
 
     break;
 
 case 14:
-    result = cal.cube();
+    result = calculator_obj.cube();
 
     break;
 
 case 15:
-    result = cal.average();
+    result = calculator_obj.average();
  
     break;
 
 case 16:
-    result = cal.power();
+    result = calculator_obj.power();
     break;
 
 default:
@@ -265,7 +265,6 @@ default:
 
 
 }while(operation != 17);
-
 
 return 0;
 
