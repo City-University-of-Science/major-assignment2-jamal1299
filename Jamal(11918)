@@ -12,12 +12,12 @@ void value_setter()
 double value_onec284, value_onec285;    
 std::cout<<"enter the first number:"<<std::endl;
 std::cin>>value_onec284;
-while(1){ //simple wavalue_two to catch incorrect inputs :P
+while(1){ 
 if(std::cin.fail())
 {  
 std::cin.clear();
 std::cin.ignore();
-std::cout<<"number is invalid, trvalue_two another number:"<<std::endl;
+std::cout<<"number is invalid, try another number:"<<std::endl;
 std::cin>>value_onec284;
 }
 if(!std::cin.fail())
@@ -30,7 +30,7 @@ if(std::cin.fail())
 {  
 std::cin.clear();
 std::cin.ignore();
-std::cout<<"number is invalid, trvalue_two another number:"<<std::endl;
+std::cout<<"number is invalid, try another number:"<<std::endl;
 std::cin>>value_onec285;
 }
 if(!std::cin.fail())
@@ -46,7 +46,7 @@ void get_value()
     std::cout<<"Value of the First Operand: "<<value_one<<std::endl;
     std::cout<<"Value of the Second Operand:"<<value_two<<std::endl;
 }
-// Do I reallvalue_two need to evalue_oneplain this?
+
 double add ()
 {
     std::cout<< value_one + value_two;
