@@ -1,271 +1,286 @@
-//id: 11918 name : jamal mehmood
+/*   
+Id : 11918 
+Name : jamal Mehmood
+     */
+   
+   
+#include<iostream>
+#include<math.h>
+using namespace std;
+ 	int limit;
+	double result;
+	double value[0];
+	double valueOne;
+	double valueTwo;
+	
+	
+	void add(){
+		cout<<"\nHow many digits you want to add : ";
+		cin>>limit;
+		value[limit];
+		for(int i = 1; i <= limit; i++){
+			cout<<"\nEnter value "<<i<<" : ";
+			cin>>value[i];
+			result += value[i];
+		}
+		cout<<"\n\nSum is : "<<result<<endl;
+	}
+	
+	void subtract(){
+		cout<<"\nHow many values you want to subtact : ";
+		cin>>limit;
+		int totalValue;
+		cout<<"\nEnter the Total value to subtract other values : ";
+		cin>>totalValue;
+		value[limit];
+		for(int i = 1; i<= limit; i++){
+			cout<<"\nEnter value "<<i<<" : ";
+			cin>>value[i];
+			totalValue -= value[i];
+			result = totalValue;
+			
+		}
+		cout<<"\n\nSubtraction is : "<<result<<endl;
+	}
+	
+	void divide(){
+		cout<<"\nEnter value 1 : ";cin>>valueOne;
+		cout<<"\nEnter value 2 : ";cin>>valueTwo;
+		if(valueTwo != 0){
+		result = valueOne;
+		result = result / valueTwo;
+		cout<<"\n\nDivision is : "<<result;
+		}
+		else{
+			cout<<"\n\ncan't divide by zero.";
+		}
+	}
+	
+	void mod(){
+		cout<<"\nEnter value 1 : ";cin>>valueOne;
+		cout<<"\nEnter value 2 : ";cin>>valueTwo;
+		result = static_cast<int>(valueOne) % static_cast<int>(valueTwo);
+		cout<<"\n\nMod is : "<<result;
+	}
 
-#include <iostream>
-#include <math.h>
+	void sqt(){
+		cout<<"\nEnter value : ";
+		cin>>valueOne;
+		result = sqrt(valueOne);
+		cout<<"\n\nSquare root is : "<<result;
+	}
+	
+	void power(){
+		int pow;
+		cout<<"\nEnter vaue : ";cin>>valueOne;
+		cout<<"\nEnter power : ";cin>>pow;
+		result=valueOne;
+		for(int i = 0; i < pow-1; i++){
+				result = result * valueOne;
+		}
+		cout<<"\n\nPower is : "<<result;
+	}
+	
+	void avg(){
+		cout<<"\nEnter the limit of numbers : ";
+		cin>>limit;
+		value[limit];
+		for(int i = 1; i <= limit; i++){
+			cout<<"\nEnter value "<<i<<" : ";
+			cin>>value[i];
+			result += value[i];
+		}
+		result = result/limit;
+		cout<<"\n\nAverage is : "<<result;
+	}
 
-class Calculator {
-double value_one, value_two; 
-public:
+	
+        void percentage(){
+		double total,obtain;
+		cout<<"\nEnter total number : "; cin>>total;
+		cout<<"\nEnter obtain : "; cin>>obtain;
+		result = (obtain*100) / total;
+		cout<<"\n\nPercentage is : "<<result<<"%";
+	}
+	
+	void cube(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = valueOne * valueOne * valueOne;
+		cout<<"\n\nCube of "<<valueOne<<" is : "<<result;	
+	}
+	
+		
+	void _sin(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = sin(valueOne);
+		cout<<"\n\nSin value is : "<<result;
+	}
+	
+	void _tan(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = tan(valueOne);
+		cout<<"\n\ntan value is : "<<result;
+	}
+	
+	void _cos(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = cos(valueOne);
+		cout<<"\n\ncos value is : "<<result;
+	}
+	
+	void _acos(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = acos(valueOne);
+		cout<<"\n\nacos value is : "<<result;
+	}
+	
+	void _asin(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = asin(valueOne);
+		cout<<"\n\nasin value is : "<<result;
+	}
+	
+	void _atan(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = atan(valueOne);
+		cout<<"\n\natan value is : "<<result;
+	}
+	
+	
+	void _log(){
+		cout<<"\nEnter value : "; cin>>valueOne;
+		result = log(valueOne);
+		cout<<"\n\nLogrithm is : "<<result;
+	}
+	
 
-void value_setter() 
-{
-double value_onec284, value_onec285;    
-std::cout<<"enter the first number:"<<std::endl;
-std::cin>>value_onec284;
-while(1){ 
-if(std::cin.fail())
-{  
-std::cin.clear();
-std::cin.ignore();
-std::cout<<"number is invalid, try another number:"<<std::endl;
-std::cin>>value_onec284;
-}
-if(!std::cin.fail())
-break;
-}
-std::cout<<"enter the second number:"<<std::endl;
-std::cin>>value_onec285;
-while(1){
-if(std::cin.fail())
-{  
-std::cin.clear();
-std::cin.ignore();
-std::cout<<"number is invalid, try another number:"<<std::endl;
-std::cin>>value_onec285;
-}
-if(!std::cin.fail())
-break;
-}
-value_one = value_onec284;
-value_two = value_onec285;
-
-}
-
-void get_value()
-{
-    std::cout<<"Value of the First Operand: "<<value_one<<std::endl;
-    std::cout<<"Value of the Second Operand:"<<value_two<<std::endl;
-}
-
-double add ()
-{
-    std::cout<< value_one + value_two;
-}
-
-double subtract ()
-{
-    std::cout<< value_one - value_two;
-}
-
-double multiplvalue_two ()
-{
-    std::cout<< value_one * value_two;
-}
-
-double divide ()
-{
-    if(value_two==0)
-    {
-     std::cout<<"You Entered a Null value as the dividand, Undefined.\n";
-
-    }
-    std::cout<< value_one / value_two;
-}
-
-double sqroot ()
-{
-    std::cout<< sqrt(value_one);
-}
-
-double log_simple ()
-{
-    std::cout<< log(value_one);
-}
-
-double log_base ()
-{
-    std::cout<< log10(value_one);
-}
-
-double sine ()
-{
-    std::cout<< sin(value_one);
-}
-
-double cosine ()
-{
-    std::cout<< cos(value_one);
-}
-
-double tangent ()
-{
-    std::cout<< tan(value_one);
-}
-
-double arc_sine ()
-{
-    std::cout<< asin(value_one);
-}
-
-double arc_cosine ()
-{
-    std::cout<< acos(value_one);
-}
-
-double arc_tan ()
-{
-    std::cout<< atan(value_one);
-}
-
-double sineh ()
-{
-    std::cout<< sinh(value_one);
-}
-
-double cosineh ()
-{
-    std::cout<< cosh(value_one);
-}
-
-double tangenth ()
-{
-    std::cout<< tanh(value_one);
-}
-
-double cube ()
-{
-    std::cout<< value_one*value_one*value_one;
-}
-
-double power ()
-{
-    std::cout<<pow(value_one,value_two);
-}
-
-double average ()
-{
-    std::cout<<(value_one+value_two)/2;
-}
-};
-
-int main()
-{
-
-Calculator calculator_obj;
-calculator_obj.value_setter(); 
-int operation;
-std::cout<<"enter the operation value_twoou would like to perform:\n0 to enter values, 1 for addition , 2 for subtraction,3 for multiplication, 4 for division,";
-std::cout<<"\n5 for sin , 6 for cos, 7 for tan,";
-std::cout<<"8 for asin(arcsine), 9 for acos(arccosine), 10 for atan(arctangent),";
-std::cout<<"\n11 for sinh(sine hvalue_twoperbolic), 12 for cosh(cos hvalue_twoperbolic), 13 tanh(tan hvalue_twoperbolic)";
-std::cout<<"\n 14 for cube, 15 for average, 16 power, 17 to evalue_oneit.\n";
-
-
-do{
-std::cout<<"\nYour Choice: \n";std::cin>>operation;
-while(1){
-if(std::cin.fail())
-{  
-std::cin.clear();
-std::cin.ignore();
-std::cout<<"invalid option. Trvalue_two Again"<<std::endl;
-std::cin>>operation;
-}
-if(!std::cin.fail())
-break;
-}  
-switch(operation)
-{
-    double result;
-case 0:
-calculator_obj.value_setter();
-    break;
-
-case 1:
-    result = calculator_obj.add();
-    break;
-
-case 2:
-    result = calculator_obj.subtract();
-    break;
-
-case 3:
-    result = calculator_obj.multiplvalue_two();
-    break;
-
-case 4:
-    result = calculator_obj.divide();
-    break;
-
-case 5:
-    result = calculator_obj.sine();
-
-    break;
-
-case 6:
-    result = calculator_obj.cosine();
- 
-    break;
-
-case 7:
-    result = calculator_obj.tangent();
-
-    break;
-
-case 8:
-    result = calculator_obj.arc_sine();
-
-    break;
-
-case 9:
-    result = calculator_obj.arc_cosine();
-
-    break;
-
-case 10:
-    result = calculator_obj.arc_tan();
-
-    break;
-
-case 11:
-    result = calculator_obj.sineh();
-
-    break;
-
-case 12:
-    result = calculator_obj.cosineh();
-
-    break;
-
-case 13:
-    result = calculator_obj.tangenth();
-
-    break;
-
-case 14:
-    result = calculator_obj.cube();
-
-    break;
-
-case 15:
-    result = calculator_obj.average();
- 
-    break;
-
-case 16:
-    result = calculator_obj.power();
-    break;
-
-default:
-    std::cout<<"Whatever value_two entered, Is invalid. Re-enter it >:(";
-    break;
-}
-
-
-
-
-}while(operation != 17);
-
-return 0;
-
+int main() {
+	char ch;
+	int option;
+	do{
+		system("cls");
+		cout<<"Press 1 for addition."<<endl;
+		cout<<"Press 2 for Subtaction."<<endl;
+		cout<<"Press 3 for Division."<<endl;
+		cout<<"Press 4 for Mod."<<endl;
+		cout<<"Press 5 for Square root."<<endl;
+		cout<<"Press 6 for Power."<<endl;
+		cout<<"Press 7 for Cube."<<endl;
+		cout<<"Press 8 for average of numbers."<<endl;
+		cout<<"Press 9 for Percentage."<<endl;
+		cout<<"Press 10 for Sin."<<endl;
+		cout<<"Press 11 for tan."<<endl;
+		cout<<"Press 12 for cos."<<endl;
+		cout<<"Press 13 for acos."<<endl;
+		cout<<"Press 14 for asin."<<endl;
+		cout<<"Press 15 for atan."<<endl;
+		cout<<"Press 16 for Logrithm."<<endl;
+		cout<<"\n\nSELECT OPTION : ";
+		cin>>option;
+		switch(option){
+			case 1:
+				system("cls");
+				cout<<"\t\t\t\taddition"<<endl;
+				cout<<"\t\t\t\t--------";
+				add();
+				break;
+			case 2:
+				system("cls");
+				cout<<"\t\t\t\tSubtraction"<<endl;
+				cout<<"\t\t\t\t-----------";
+				subtract();
+				break;
+			case 3:
+				system("cls");
+				cout<<"\t\t\t\tDivision"<<endl;
+				cout<<"\t\t\t\t--------";
+				divide();
+				break;
+			case 4:
+				system("cls");
+				cout<<"\t\t\t\tMod"<<endl;
+				cout<<"\t\t\t\t---";
+				mod();
+				break;
+			case 5:
+				system("cls");
+				cout<<"\t\t\t\tSqare root"<<endl;
+				cout<<"\t\t\t\t----------";
+				sqt();
+				break;
+			case 6:
+				system("cls");
+				cout<<"\t\t\t\tPower"<<endl;
+				cout<<"\t\t\t\t-----";
+				power();
+				break;
+			case 7:
+				system("cls");
+				cout<<"\t\t\t\tCube"<<endl;
+				cout<<"\t\t\t\t----";
+				cube();
+				break;
+			case 8:
+				system("cls");
+				cout<<"\t\t\t\taverage of Number"<<endl;
+				cout<<"\t\t\t\t-----------------";
+				avg();
+				break;
+			case 9:
+				system("cls");
+				cout<<"\t\t\t\tPercentage"<<endl;
+				cout<<"\t\t\t\t----------";
+				percentage();
+				break;
+			case 10:
+				system("cls");
+				cout<<"\t\t\t\tSin"<<endl;
+				cout<<"\t\t\t\t---";
+				_sin();
+				break;
+			case 11:
+				system("cls");
+				cout<<"\t\t\t\ttan"<<endl;
+				cout<<"\t\t\t\t---";
+				_tan();
+				break;
+			case 12:
+				system("cls");
+				cout<<"\t\t\t\tCos"<<endl;
+				cout<<"\t\t\t\t---";
+				_cos();
+				break;
+			case 13:
+				system("cls");
+				cout<<"\t\t\t\tacos"<<endl;
+				cout<<"\t\t\t\t----";
+				_acos();
+				break;
+			case 14:
+				system("cls");
+				cout<<"\t\t\t\tasin"<<endl;
+				cout<<"\t\t\t\t----";
+				_asin();
+				break;
+			case 15:
+				system("cls");
+				cout<<"\t\t\t\tatan"<<endl;
+				cout<<"\t\t\t\t----";
+				_atan();
+				break;
+			case 16:
+				system("cls");
+				cout<<"\t\t\t\tLogrithm"<<endl;
+				cout<<"\t\t\t\t--------";
+				_log();
+				break;
+			
+				
+			default:
+				cout<<"\nInvalid Entry";
+			
+		}
+		cout<<endl<<endl;
+		cout<<"\nDo you want to continue y/n : "; cin>>ch;
+	}while(ch == 'y' || ch == 'Y');
 }
