@@ -1,3 +1,5 @@
+//id: 11918 name : jamal mehmood
+
 #include <iostream>
 #include <math.h>
 
@@ -158,6 +160,111 @@ std::cout<<"\n5 for sin , 6 for cos, 7 for tan,";
 std::cout<<"\n8 for asin(arcsine), 9 for acos(arccosine), 10 for atan(arctangent),";
 std::cout<<"\n11 for sinh(sine hvalue_twoperbolic), 12 for cosh(cos hvalue_twoperbolic), 13 tanh(tan hvalue_twoperbolic)";
 std::cout<<"\n 14 for cube, 15 for average, 16 power, 17 to evalue_oneit.\n";
+
+do{
+std::cout<<"\nYour Choice: \n";std::cin>>operation;
+while(1){
+if(std::cin.fail())
+{  
+std::cin.clear();
+std::cin.ignore();
+std::cout<<"invalid option. Trvalue_two Again"<<std::endl;
+std::cin>>operation;
+}
+if(!std::cin.fail())
+break;
+}  
+switch(operation)
+{
+    double result;
+case 0:
+cal.value_setter();
+    break;
+
+case 1:
+    result = cal.add();
+    break;
+
+case 2:
+    result = cal.subtract();
+    break;
+
+case 3:
+    result = cal.multiplvalue_two();
+    break;
+
+case 4:
+    result = cal.divide();
+    break;
+
+case 5:
+    result = cal.sine();
+
+    break;
+
+case 6:
+    result = cal.cosine();
+ 
+    break;
+
+case 7:
+    result = cal.tangent();
+
+    break;
+
+case 8:
+    result = cal.arc_sine();
+
+    break;
+
+case 9:
+    result = cal.arc_cosine();
+
+    break;
+
+case 10:
+    result = cal.arc_tan();
+
+    break;
+
+case 11:
+    result = cal.sineh();
+
+    break;
+
+case 12:
+    result = cal.cosineh();
+
+    break;
+
+case 13:
+    result = cal.tangenth();
+
+    break;
+
+case 14:
+    result = cal.cube();
+
+    break;
+
+case 15:
+    result = cal.average();
+ 
+    break;
+
+case 16:
+    result = cal.power();
+    break;
+
+default:
+    std::cout<<"Whatever value_two entered, Is invalid. Re-enter it >:(";
+    break;
+}
+
+
+
+
+}while(operation != 17);
 
 
 return 0;
